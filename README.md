@@ -12,10 +12,12 @@ acl2025-contrastive-perplexity的复现
 外面那个README.md中训练数据这部分没给出，完整训练数据制作流程在scripts文件夹那个README.md中
 
 2、AUTO_GPTQ安装后显示未安装的问题
+
 遇到了WARNING - CUDA kernels for auto_gptq are not installed, this will result in very slow inference speed.这个问题，导致推理速度极慢
 具体解决步骤请看：https://blog.csdn.net/wi162yyxq/article/details/141422519
 
 3、模型补丁问题，以train_mistral_hard_negatives.py为例
+
 在这里为模型打补丁
 <img width="812" height="266" alt="image" src="https://github.com/user-attachments/assets/90ddf315-0024-4923-bd6c-c5604dceea8b" />
 还要将output['loss']改为output.loss
