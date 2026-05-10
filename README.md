@@ -39,7 +39,7 @@ python merge_lora.py
 然后再使用
 
 python scripts/compute_perplexity.py \
-  --model_path autodl-tmp/mistral-detox-merged \
+  --model_path /root/autodl-tmp/mistral-detox-merged \
   --data_dir data/paraphrase/safeNLP_processed \
   --num_toxic_samples 4 \
   --num_neutral_samples 0
