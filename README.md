@@ -47,6 +47,16 @@ python scripts/compute_perplexity.py \
 来计算困惑度
 
 
+另外，我提供了generate_rtp_100.py脚本来根据real-toxicity-prompts提示词使用模型生成文本，然后再使用compute_toxicity_rate.py脚本对生成的文本进行有毒率的计算
+
+python scripts/generate_rtp_100.py --model_path mistralai/Mistral-7B-v0.1 --out_jsonl rtp_generations_100_original.jsonl --num_samples 50 --shuffle --seed 42 --use_4bit --do_sample --temperature 0.8 --top_p 0.9 --max_new_tokens 128 --max_chars 200
+
+python scripts/generate_rtp_100.py --model_path /root/autodl-tmp/mistral-detox-merged --out_jsonl rtp_generations_100_detox.jsonl --num_samples 50 --shuffle --seed 42 --use_4bit --do_sample --temperature 0.8 --top_p 0.9 --max_new_tokens 128 --max_chars 200
+
+python acl2025-contrastive-perplexity/scripts/compute_toxicity_rate.py
+
+
+
 
 
 
