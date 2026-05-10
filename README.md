@@ -5,6 +5,7 @@ acl2025-contrastive-perplexity的复现
 复现只做了CP这个方法有效性的简单验证，如有不对的地方请指出
 环境配置及部署请看上面连接中源代码的README.md
 下面是我做复现时遇到的问题和解决方法：
+
 1、数据集的预处理：
 <img width="1207" height="402" alt="image" src="https://github.com/user-attachments/assets/5e22e405-1b76-4ec2-aa3c-58ee55b5086b" />
 
