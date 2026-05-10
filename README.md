@@ -29,6 +29,23 @@ acl2025-contrastive-perplexity的复现
 
 不然会显示TypeError: forward() got an unexpected keyword argument 'loss_reduction'等问题
 
+4、训练生成的模型adapter_model.safetensors是LoRA适配器，compute_perplexity.py不支持--lora_path，它只能加载完整模型，但训练后只有LoRA适配器
+
+这个问题请使用我提供的merge_lora.py脚本来解决
+
+python merge_lora.py
+
+
+然后再使用
+
+python scripts/compute_perplexity.py \
+  --model_path autodl-tmp/mistral-detox-merged \
+  --data_dir data/paraphrase/safeNLP_processed \
+  --num_toxic_samples 4 \
+  --num_neutral_samples 0
+
+来计算困惑度
+
 
 
 
